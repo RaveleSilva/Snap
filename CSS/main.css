@@ -85,6 +85,7 @@ main img{
 @media (max-width: 650px){
     main{
         padding: 80px 20px;
+        padding-bottom: 40px;
     }
 
     .main-text h1{
