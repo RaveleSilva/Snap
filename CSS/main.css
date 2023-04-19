@@ -1,0 +1,52 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    padding-bottom: 80px;
+    gap: 80px;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+main h1,
+main p{
+    margin-bottom: 60px;
+}
+
+main p{
+    max-width: 46ch;
+}
+
+main button{
+    padding: 12px 28px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--c-3);
+    margin-bottom: 80px;
+    max-width: max-content;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+
+main button:hover{
+    background-color: transparent;
+    color: var(--c-3);
+    border: 2px solid;
+    cursor: pointer;
+}
+
+main img{
+    justify-self: end;
+    max-width: 500px;
+}
+
+.promoters{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 40px;
+}

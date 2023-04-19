@@ -1,0 +1,69 @@
+/*Default Settings*/
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Typography */
+
+.font-0{
+    font: 500 12px/1.5 'Epilogue', sans-serif;
+}
+
+.font-1{
+    font: 500 1rem/1.5 'Epilogue', sans-serif;
+}
+
+.font-2{
+    font: 500 18px/1.5 'Epilogue', sans-serif;
+}
+
+.font-3{
+    font: 500 20px/1.5 'Epilogue', sans-serif;
+}
+
+.font-4{
+    font: 700 80px/1.1 'Epilogue', sans-serif;
+}
+
+/* Colors */
+
+:root{
+    --c-1: hsl(0, 0%, 98%);
+    --c-2: hsl(0, 0%, 41%);
+    --c-3: hsl(0, 0%, 8%);
+}
+
+.c1{
+    color: var(--c-1);
+}
+
+.c2{
+    color: var(--c-2);
+}
+
+.c3{
+    color: var(--c-3);
+}
+
+/* Components */
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+

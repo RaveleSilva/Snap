@@ -1,0 +1,114 @@
+header{
+    padding: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+.header-nav{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.header-nav > ul{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links > li > a{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links > li > a:hover{
+    color: black;
+    transition: 0.4s;
+}
+
+.nav-links > li a > span img{
+    width: 16px;
+}
+
+.dropdown-button.ativo img{
+    transition: 0.3s;
+    rotate: -180deg;
+}
+
+.header-nav > ul > li:nth-child(1),
+.header-nav > ul > li:nth-child(2){
+    position: relative;
+    margin-right: 12px;
+}
+
+.login-register{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.login-register a:hover,
+.login-register button:hover{
+    color: black;
+    transition: 0.4s;
+}
+
+.login-register button{
+    background-color: transparent;
+    border: 2px solid var(--c-2);
+    padding: 8px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.login-register button:hover{
+    border: 2px solid black;
+}
+
+.dropdown-list{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 8px;
+    background-color: white;
+    position: absolute;
+    border-radius: 12px;
+    right: 10px;
+    margin-top: 4px;
+    box-shadow:
+    20px 20px 30px rgba(0, 0, 0, 0.065),
+    -20px 20px 30px rgba(0, 0, 0, 0.065),
+    20px -20px 30px rgba(0, 0, 0, 0.065),
+    -20px -20px 30px rgba(0, 0, 0, 0.065);
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    padding: 0px 20px;
+}
+
+.dropdown-list.ativo{
+    visibility: visible;
+    height: 160px;
+    padding: 20px;
+}
+
+.dropdown-list a{
+    display: flex;
+    gap: 16px;
+    width: max-content;
+}
+
+.dropdown-list a:hover{
+    text-decoration: underline var(--c-2);
+}
+
