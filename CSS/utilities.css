@@ -38,6 +38,16 @@ img{
     font: 700 80px/1.1 'Epilogue', sans-serif;
 }
 
+@media (max-width: 650px){
+    .font-2{
+        font-size: 1rem;
+    }
+
+    .font-4{
+        font-size: 36px;
+    }
+}
+
 /* Colors */
 
 :root{

@@ -1,7 +1,11 @@
+body{
+    background-color: var(--c-1);
+}
+
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px;
+    padding: 60px;
     padding-bottom: 80px;
     gap: 80px;
 }
@@ -10,23 +14,23 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    gap: 60px;
 }
 
-main h1,
-main p{
-    margin-bottom: 60px;
+.main-text h1{
+    max-width: 11ch;
 }
 
-main p{
+.main-text p{
     max-width: 46ch;
 }
 
-main button{
+.main-text button{
     padding: 12px 28px;
     border-radius: 12px;
     border: none;
     background-color: var(--c-3);
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     max-width: max-content;
     border: 2px solid transparent;
     transition: 0.4s;
@@ -49,4 +53,41 @@ main img{
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     gap: 40px;
+}
+
+@media (max-width: 900px){
+    main{
+        grid-template-columns: 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    picture{
+        order: -1;
+    }
+
+    .main-text{
+        gap: 28px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-text button{
+        margin: auto;
+        margin-bottom: 28px;
+    }
+
+    .promoters{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 650px){
+    main{
+        padding: 80px 20px;
+    }
+
+    .main-text h1{
+        max-width: unset;
+    }
 }
