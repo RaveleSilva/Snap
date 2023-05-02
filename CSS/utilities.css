@@ -16,6 +16,13 @@ img{
     display: block;
 }
 
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
 /* Typography */
 
 .font-0{

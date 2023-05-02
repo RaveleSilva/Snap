@@ -1,12 +1,21 @@
-const dropDownButton = document.querySelector('.dropdown-button')
-const dropDownList = document.querySelector('.dropdown-list')
+const dropDown = document.querySelectorAll('.dropdown')
 
-function activateDropdownButton(){
+function activateDropdown(event){
+    const droplist = event.currentTarget
+    const controls = droplist.getAttribute('aria-controls')
+    const dropDownList = document.getElementById(controls)
+    
+    droplist.classList.toggle('ativo')
     dropDownList.classList.toggle('ativo')
-    dropDownButton.classList.toggle('ativo')
+
 }
 
-dropDownButton.addEventListener('click', activateDropdownButton)
+
+function eventosDropdown(dropdown){
+    dropdown.addEventListener('click', activateDropdown)
+}
+
+dropDown.forEach(eventosDropdown)
 
 
 

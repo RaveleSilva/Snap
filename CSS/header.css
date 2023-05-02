@@ -26,13 +26,13 @@ header{
     width: 100%;
 }
 
-
 .nav-links{
     display: flex;
     gap: 30px;
 }
 
-.nav-links > li > a{
+.nav-links > li > a,
+.dropdown-button{
     position: relative;
     padding: 10px;
     display: flex;
@@ -40,18 +40,24 @@ header{
     gap: 8px;
 }
 
-.nav-links > li > a:hover{
+.nav-links > li > a:hover,
+.dropdown button:hover{
     color: black;
     transition: 0.4s;
 }
 
-.nav-links > li a > span img{
+.nav-links > li a > span img,
+.dropdown-button img{
     width: 16px;
 }
 
-.dropdown-button.ativo img{
+.dropdown.ativo > .dropdown-button img{
     transition: 0.3s;
     rotate: -180deg;
+}
+
+.dropdown.ativo > .dropdown-button{
+    color: var(--c-3);
 }
 
 .header-nav > ul > li:nth-child(1),
@@ -92,8 +98,8 @@ header{
     background-color: white;
     position: absolute;
     border-radius: 12px;
-    left: 150px;
-    top: 90px;
+    top: 50px;
+    right: 0px;
     box-shadow:
     20px 20px 30px rgba(0, 0, 0, 0.065),
     -20px 20px 30px rgba(0, 0, 0, 0.065),
@@ -108,7 +114,7 @@ header{
 
 .dropdown-list.ativo{
     visibility: visible;
-    height: 160px;
+    height: auto;
     padding: 20px;
 }
 
@@ -169,19 +175,6 @@ header{
     background-color: var(--c-2);
 }
 
-.backshadow{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    visibility: hidden;
-}
-
-.backshadow.active{
-    visibility: visible;
-}
 
 @media (max-width: 1000px){
     .menu-hamburger{
@@ -222,11 +215,15 @@ header{
     }
 
     .nav-links{
-        gap: 10px;
         align-items: flex-start;
     }
+    .nav-links a,
+    .nav-links button{
+        margin-top: 10px;
+    }
 
-    .nav-links > li > a{
+    .nav-links > li > a,
+    .dropdown-button{
         padding: 5px;
     }
 
@@ -243,6 +240,20 @@ header{
 
     .login-register button{
         width: 100%;
+    }
+
+    .backshadow{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        visibility: hidden;
+    }
+    
+    .backshadow.active{
+        visibility: visible;
     }
 }
 
